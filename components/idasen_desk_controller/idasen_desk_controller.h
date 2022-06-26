@@ -8,6 +8,7 @@
 #ifdef ARDUINO_ARCH_ESP32
 // https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/bluetooth/esp_gattc.html
 #include <esp_gattc_api.h>
+#endif
 
 namespace esphome {
 namespace idasen_desk_controller {
@@ -68,5 +69,3 @@ class IdasenDeskControllerComponent : public Component, public cover::Cover, pub
 };
 }  // namespace idasen_desk_controller
 }  // namespace esphome
-
-#endif
