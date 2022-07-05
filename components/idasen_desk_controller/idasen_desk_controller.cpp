@@ -284,6 +284,7 @@ void IdasenDeskControllerComponent::stop_move_() {
 }
 
 bool IdasenDeskControllerComponent::is_at_target_() const {
+  ESP_LOGD(TAG, "is_at_target_? -> current_op=%d", this->current_operation);
   switch (this->current_operation) {
     case cover::COVER_OPERATION_OPENING:
       return this->position >= this->position_target_;
